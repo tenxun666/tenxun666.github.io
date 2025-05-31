@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户中心 - 视频网站</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">视频网站</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="video_list.html?category=movie">电影</a></li>
+                <li><a href="video_list.html?category=series">电视剧</a></li>
+                <li><a href="video_list.html?category=anime">动漫</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索视频...">
+            <button>搜索</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html" id="loginLink">登录</a>
+            <a href="register.html" id="registerLink">注册</a>
+            <a href="profile.html" id="profileLink" style="display:none;">个人中心</a>
+            <a href="#" id="logoutLink" style="display:none;">退出</a>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-container">
+            <h2>用户中心</h2>
+            <div class="profile-details">
+                <div class="profile-avatar">
+                    <img src="../images/default_avatar.png" alt="用户头像" id="avatarImage">
+                    <!-- <button id="changeAvatarButton">更换头像 (模拟)</button> -->
+                </div>
+                <div class="profile-info">
+                    <p><strong>用户名:</strong> <span id="profileUsername">加载中...</span></p>
+                    <p><strong>邮箱:</strong> <span id="profileEmail">加载中... (模拟)</span></p>
+                    <!-- Mock "edit" functionality could be added here -->
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h3>观看历史 (模拟)</h3>
+                <ul id="watchHistoryList">
+                    <li><a href="player.html?id=mockVideo1">你看过的视频1</a> - 观看于 2023-10-25</li>
+                    <li><a href="player.html?id=mockVideo2">你看过的视频2</a> - 观看于 2023-10-24</li>
+                    <!-- More items here -->
+                </ul>
+                <p id="noWatchHistory" style="display:none;">暂无观看历史。</p>
+            </div>
+
+            <div class="profile-section">
+                <h3>我的收藏 (模拟)</h3>
+                <ul id="favoritesList">
+                    <li><a href="player.html?id=mockVideo3">你收藏的视频3</a></li>
+                    <li><a href="player.html?id=mockVideo4">你收藏的视频4</a></li>
+                    <!-- More items here -->
+                </ul>
+                <p id="noFavorites" style="display:none;">暂无收藏。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 视频网站. 保留所有权利.</p>
+        <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/data.js"></script> <!-- For potential use with history/favorites if linked to actual video items -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

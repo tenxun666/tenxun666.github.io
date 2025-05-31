@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 视频网站</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">视频网站</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="video_list.html?category=movie">电影</a></li>
+                <li><a href="video_list.html?category=series">电视剧</a></li>
+                <li><a href="video_list.html?category=anime">动漫</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索视频...">
+            <button>搜索</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html" id="loginLink">登录</a>
+            <a href="register.html" id="registerLink">注册</a>
+            <a href="profile.html" id="profileLink" style="display:none;">个人中心</a>
+            <a href="#" id="logoutLink" style="display:none;">退出</a>
+        </div>
+    </header>
+
+    <main class="static-page">
+        <section class="static-content-container contact-form-section">
+            <h2>联系我们</h2>
+            <p>如果您有任何问题、建议或合作意向，请通过以下方式与我们联系，或填写下方的联系表单。</p>
+
+            <div class="contact-info">
+                <p><strong>邮箱:</strong> contact@examplevideos.com (模拟)</p>
+                <p><strong>电话:</strong> +86 10 1234 5678 (模拟)</p>
+                <p><strong>地址:</strong> 中国北京市XX区XX街道XX号 (模拟)</p>
+            </div>
+
+            <form id="contactForm">
+                <h3>发送消息给我们</h3>
+                <div class="form-group">
+                    <label for="contactName">您的姓名:</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">您的邮箱:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">主题:</label>
+                    <input type="text" id="contactSubject" name="contactSubject" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">消息内容:</label>
+                    <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">发送消息</button>
+                <p class="message" id="contactFormMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 视频网站. 保留所有权利.</p>
+        <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Mock contact form submission (can be moved to main.js if preferred)
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const messageElem = document.getElementById('contactFormMessage');
+                    // Basic validation
+                    if (contactForm.contactName.value && contactForm.contactEmail.value && contactForm.contactMessage.value) {
+                        messageElem.textContent = '感谢您的留言，我们会尽快与您联系！ (模拟)';
+                        messageElem.style.color = 'green';
+                        contactForm.reset();
+                    } else {
+                        messageElem.textContent = '请填写所有必填项。';
+                        messageElem.style.color = 'red';
+                    }
+                    setTimeout(() => messageElem.textContent = '', 3000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

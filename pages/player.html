@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频播放 - 视频网站</title> <!-- Title will be updated by JS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">视频网站</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="video_list.html?category=movie">电影</a></li>
+                <li><a href="video_list.html?category=series">电视剧</a></li>
+                <li><a href="video_list.html?category=anime">动漫</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索视频...">
+            <button>搜索</button>
+        </div>
+        <div class="user-actions">
+            <a href="login.html" id="loginLink">登录</a>
+            <a href="register.html" id="registerLink">注册</a>
+            <a href="profile.html" id="profileLink" style="display:none;">个人中心</a>
+            <a href="#" id="logoutLink" style="display:none;">退出</a>
+        </div>
+    </header>
+
+    <main class="video-player-page">
+        <section class="player-section">
+            <h2 id="videoTitle">视频标题加载中...</h2>
+            <div class="video-player-wrapper">
+                <video id="mainVideoPlayer" controls width="100%">
+                    <!-- Source will be set by JavaScript -->
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持HTML5视频播放器。
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>视频简介</h3>
+                <p id="videoDescription">视频描述加载中...</p>
+            </div>
+        </section>
+
+        <section class="comments-section">
+            <h3>评论区</h3>
+            <div class="comment-list">
+                <!-- Mock comments -->
+                <div class="comment">
+                    <p class="comment-author">用户A:</p>
+                    <p class="comment-text">这个视频太棒了！</p>
+                </div>
+                <div class="comment">
+                    <p class="comment-author">用户B:</p>
+                    <p class="comment-text">学到了很多，感谢分享。</p>
+                </div>
+            </div>
+            <div class="add-comment">
+                <h4>发表评论</h4>
+                <textarea placeholder="写下你的评论..."></textarea>
+                <button>提交评论</button>
+            </div>
+        </section>
+
+        <section class="related-videos-section">
+            <h3>相关视频</h3>
+            <div class="video-grid" id="relatedVideosGrid">
+                <!-- Related videos will be populated by JS -->
+                <p>相关视频加载中...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 视频网站. 保留所有权利.</p>
+        <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/data.js"></script> <!-- Include mock data -->
+    <script src="../js/main.js"></script>
+    <!-- We might create a dedicated js/player.js later -->
+</body>
+</html>

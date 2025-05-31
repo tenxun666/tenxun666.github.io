@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册 - 视频网站</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">视频网站</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="video_list.html?category=movie">电影</a></li>
+                <li><a href="video_list.html?category=series">电视剧</a></li>
+                <li><a href="video_list.html?category=anime">动漫</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-form-container">
+            <h2>用户注册</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUsername">用户名:</label>
+                    <input type="text" id="regUsername" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">邮箱:</label>
+                    <input type="email" id="regEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">密码:</label>
+                    <input type="password" id="regPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">确认密码:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-submit">注册</button>
+                <p class="message" id="registerMessage"></p>
+            </form>
+            <p>已有账户? <a href="login.html">立即登录</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 视频网站. 保留所有权利.</p>
+        <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>
