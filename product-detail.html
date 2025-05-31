@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - E-Commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <form id="search-form">
+            <input type="search" id="search-input" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+        <article class="product-detail-container">
+            <section id="product-image">
+                <!-- <h2>Product Image</h2> REMOVE this h2 if image is self-explanatory -->
+                <img src="images/placeholder_large.png" alt="Product Image Large"> <!-- Placeholder image -->
+            </section>
+            <section id="product-info">
+                <h1>Product Name</h1>
+                <p id="product-price">Price: $XX.XX</p>
+                <div id="product-description">
+                    <h3>Description</h3>
+                    <p>Detailed product description goes here. This section will elaborate on the product features, benefits, and usage.</p>
+                </div>
+                <div id="product-specifications">
+                    <h3>Specifications</h3>
+                    <!-- Placeholder for specifications -->
+                    <ul>
+                        <li>Spec 1: Value</li>
+                        <li>Spec 2: Value</li>
+                        <li>Spec 3: Value</li>
+                    </ul>
+                </div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" style="width: 50px; padding: 5px;">
+                <button id="add-to-cart-btn">Add to Cart</button>
+            </section>
+            <section id="customer-reviews">
+                <h3>Customer Reviews</h3>
+                <div class="review">
+                    <p class="reviewer-name">Jane D.</p>
+                    <p>This product is amazing! Highly recommend.</p>
+                </div>
+                <div class="review">
+                    <p class="reviewer-name">John S.</p>
+                    <p>Good value for the price. Works as expected.</p>
+                </div>
+                <!-- Placeholder for static customer reviews -->
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My E-Commerce Site</p>
+        <nav>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>Social Media</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script> <!-- Added cart.js as per original file structure -->
+</body>
+</html>

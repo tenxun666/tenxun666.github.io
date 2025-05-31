@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - E-Commerce Site</title>
+    <title>User Profile - E-Commerce Site</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,26 +18,31 @@
                 <li><a href="register.html">Register</a></li>
             </ul>
         </nav>
-        <form id="search-form">
-            <input type="search" id="search-input" placeholder="Search products...">
+        <form id="search-form-header">
+            <input type="search" id="search-input-header" placeholder="Search products...">
             <button type="submit">Search</button>
         </form>
     </header>
 
     <main>
-        <section id="promo-banners">
-            <h2>Promotional Banners</h2>
-            <!-- Placeholder for banners -->
+        <h2>User Profile</h2>
+        <section id="user-details">
+            <h3>My Details</h3>
+            <p><strong>Name:</strong> John Doe (Mocked)</p>
+            <p><strong>Email:</strong> john.doe@example.com (Mocked)</p>
+            <button id="edit-profile-btn">Edit Profile (Mocked)</button>
         </section>
-
-        <section id="featured-products">
-            <h2>Featured Products</h2>
-            <!-- Placeholder for featured products -->
-        </section>
-
-        <section id="product-categories">
-            <h2>Product Categories</h2>
-            <!-- Placeholder for categories -->
+        <section id="order-history">
+            <h3>My Order History</h3>
+            <!-- Placeholder for list of past orders (mocked) -->
+            <div class="order-history-item">
+                <p>Order ID: #12345 - Total: $XX.XX - Date: YYYY-MM-DD</p>
+                <a href="order-confirmation.html?orderId=12345">View Order</a>
+            </div>
+            <div class="order-history-item">
+                <p>Order ID: #67890 - Total: $YY.YY - Date: YYYY-MM-DD</p>
+                <a href="order-confirmation.html?orderId=67890">View Order</a>
+            </div>
         </section>
     </main>
 
@@ -51,7 +56,6 @@
             </ul>
         </nav>
         <div>
-            <!-- Placeholder for social media icons -->
             <p>Social Media</p>
         </div>
     </footer>

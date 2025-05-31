@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - E-Commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <form id="search-form">
+            <input type="search" id="search-input" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <section id="shipping-address">
+                <h3>Shipping Address</h3>
+                <!-- Placeholder for shipping address form fields -->
+                <div><label for="fullName">Full Name:</label><input type="text" id="fullName" name="fullName" required></div>
+                <div><label for="address">Address:</label><input type="text" id="address" name="address" required></div>
+                <div><label for="city">City:</label><input type="text" id="city" name="city" required></div>
+                <div><label for="zip">ZIP Code:</label><input type="text" id="zip" name="zip" required></div>
+            </section>
+
+            <section id="payment-info">
+                <h3>Payment Information (Mock)</h3>
+                <!-- Placeholder for payment information form fields -->
+                <div><label for="cardNumber">Card Number:</label><input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required></div>
+                <div><label for="expiryDate">Expiry Date:</label><input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required></div>
+                <div><label for="cvv">CVV:</label><input type="text" id="cvv" name="cvv" placeholder="XXX" required></div>
+            </section>
+
+            <section id="order-summary-checkout">
+                <h3>Order Summary</h3>
+                <!-- Placeholder for order summary, dynamically filled by JS perhaps -->
+                <p>Total Amount: <span id="checkout-total">$0.00</span></p>
+            </section>
+
+            <button type="submit" id="place-order-btn">Place Order</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My E-Commerce Site</p>
+        <nav>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>Social Media</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- No js/cart.js here unless specifically needed for checkout logic apart from main.js -->
+</body>
+</html>

@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Basic font stack */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light grey background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer sticks to bottom */
+}
+
+.container { /* To be added to main content wrappers in HTML if needed */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center; /* Simple centered header */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Basic styling for header search form */
+#search-form-header { /* Updated to match HTML */
+    margin-top: 1rem;
+}
+
+#search-input-header { /* Updated to match HTML */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: auto; /* Prevent full width from global input style */
+}
+
+#search-form-header button { /* Specific to header search button */
+    padding: 0.5rem 1rem;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#search-form-header button:hover {
+    background: #4cae4c;
+}
+
+main {
+    flex-grow: 1; /* Allows main to take up available space */
+    padding: 20px 0; /* Add some padding */
+    /* If using .container for main sections, add it in HTML: <main><div class="container">...</div></main> */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Pushes footer to bottom with flex body */
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0.5rem; /* Add some space below nav if there's more content */
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75rem;
+    color: #333; /* Default heading color */
+}
+h1 { font-size: 2.5rem; } /* Typically page title, e.g., in header */
+h2 { font-size: 2rem; }   /* Typically section titles within main */
+h3 { font-size: 1.75rem; } /* Typically sub-section titles */
+
+a {
+    color: #007bff; /* Standard link blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* General button styling - more specific button styles (like header search) will override */
+button, input[type="submit"], input[type="button"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* Global form element styling - can be overridden by more specific selectors */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make labels stand out a bit */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"], /* General search inputs, not header one */
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* Default to full width of their container */
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding and border don't make it overflow container */
+}
+
+/* Ensure that search input in header is not full width by default */
+#search-input-header {
+    width: auto;
+}
+
+/* --- Homepage Specific Styles --- */
+#promo-banners, #featured-products, #product-categories {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; /* White background for sections */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Example: Placeholder styling for a banner */
+.banner {
+    background-color: #e9e9e9;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Example: Placeholder styling for product grids/lists if needed globally */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between product items */
+    justify-content: center; /* Center items if they don't fill the row */
+}
+
+.product-item { /* General product item styling, can be reused */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: calc(33.333% - 20px); /* Example for 3 items per row, adjust as needed */
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-item h3 { /* Product titles within items */
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.product-item .price {
+    color: #e74c3c; /* Price color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- Login/Registration Page Specific Styles --- */
+.auth-container { /* A wrapper for login/register forms */
+    width: 100%;
+    max-width: 400px; /* Max width for the form container */
+    margin: 20px auto; /* Center the container */
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.auth-container h2 { /* Page title like "Login" or "Register" */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-container .form-group {
+    margin-bottom: 15px;
+}
+
+/* .auth-container label is covered by global label style */
+
+/* .auth-container input types are covered by global input styles */
+
+.auth-container button[type="submit"] { /* Specific submit button for these forms */
+    width: 100%; /* Make button full width */
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.auth-container .form-link { /* For "Need an account?" or "Already have an account?" links */
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* --- Product Listing Page Specific Styles (`products.html`) --- */
+#products-main-container { /* Optional: A wrapper for products page main content if needed for layout */
+    display: flex;
+    gap: 20px;
+    padding: 20px; /* Add padding around the main container */
+}
+
+#filters-sorting {
+    flex-basis: 250px; /* Width of the sidebar */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    height: fit-content; /* Make sidebar height fit its content */
+}
+
+#filters-sorting h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label { /* Already bold from global styles, specificity might be needed if issues */
+    display: block; /* Ensured by global label style */
+    margin-bottom: 8px;
+}
+
+.filter-group select,
+.filter-group input[type="text"], /* Should already be styled by global input styles */
+.filter-group input[type="number"] {
+    width: 100%; /* Ensure they take full width of their container */
+}
+
+#product-list-container {
+    flex-grow: 1; /* Product list takes remaining space */
+    /* .product-grid and .product-item styles are already defined globally and should apply here */
+}
+
+/* --- Product Details Page Specific Styles (`product-detail.html`) --- */
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between image and info sections */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px; /* Add some margin around the container */
+}
+
+#product-image {
+    flex-basis: 40%; /* Image section takes 40% width */
+    min-width: 280px; /* Ensure image section doesn't get too small */
+    text-align: center; /* Center the image if it's smaller */
+}
+
+#product-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+#product-info {
+    flex-basis: 55%; /* Info section takes 55% width, leaves some gap space */
+    min-width: 280px; /* Ensure info section doesn't get too small */
+}
+
+#product-info h1 { /* Product Name */
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+#product-price {
+    font-size: 1.8rem;
+    color: #e74c3c; /* Prominent price color */
+    margin-bottom: 20px;
+}
+
+#product-description, #product-specifications {
+    margin-bottom: 20px;
+}
+
+#product-description h3, #product-specifications h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#product-info label[for="quantity"] {
+    /* font-weight: bold; from global label style */
+    margin-right: 10px;
+    display: inline-block; /* Align with input */
+}
+
+#product-info input[type="number"]#quantity {
+    width: 60px; /* Smaller width for quantity input */
+    padding: 8px; /* From global input style */
+    text-align: center;
+    margin-right: 15px;
+    display: inline-block; /* Align with label */
+}
+
+#add-to-cart-btn { /* Specific styling for this button */
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #28a745; /* Green color for add to cart */
+}
+#add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+#customer-reviews {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%; /* Span full width below image/info */
+}
+
+#customer-reviews h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.review { /* Example styling for a single review */
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.review:last-child {
+    border-bottom: none;
+}
+.review p {
+    margin-bottom: 5px;
+}
+.review .reviewer-name {
+    font-weight: bold;
+}

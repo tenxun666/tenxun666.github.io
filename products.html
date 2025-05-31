@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce Site</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Site</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <form id="search-form">
+            <input type="search" id="search-input" placeholder="Search products...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        <div id="products-main-container">
+            <aside id="filters-sorting">
+                <h3>Filters & Sorting</h3>
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" name="category">
+                        <option value="">All</option>
+                        <!-- Options to be added by JS -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-sort">Sort by Price:</label>
+                    <select id="price-sort" name="sort">
+                        <option value="default">Default</option>
+                        <option value="asc">Low to High</option>
+                        <option value="desc">High to Low</option>
+                    </select>
+                </div>
+                <!-- More filter/sort controls can be added here -->
+            </aside>
+            <section id="product-list-container">
+                <div class="product-grid">
+                    <!-- Product items will be populated here by JS -->
+                    <p>Loading products...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My E-Commerce Site</p>
+        <nav>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>Social Media</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
