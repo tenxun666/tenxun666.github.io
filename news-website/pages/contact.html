@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My News Website</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">NewsWebsite</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-content">
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="world.html">World</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="static-page">
+        <section class="page-container contact-container">
+            <h2>联系我们</h2>
+
+            <div class="contact-form-section">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">发送消息</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-info-section">
+                <h3>Our Contact Information</h3>
+                <p><strong>Address:</strong> 123 News Street, Media City, MC 45678</p>
+                <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@newswebsite.com">contact@newswebsite.com</a></p>
+                <p>Feel free to reach out to us through the form or using the contact details above. We aim to respond to all queries within 24-48 hours.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NewsWebsite. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Placeholder for contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual submission for now
+                alert('Contact form submitted (functionality not implemented). Thank you for your message!');
+                // In a real application, this would send data to a server (e.g., via fetch or XMLHttpRequest)
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

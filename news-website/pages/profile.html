@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - My News Website</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">NewsWebsite</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-content">
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="world.html">World</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-container">
+            <h2>个人资料</h2>
+            <div class="profile-info">
+                <p><strong>用户名:</strong> <span id="profileUsername">[Placeholder Username]</span></p>
+                <p><strong>电子邮箱:</strong> <span id="profileEmail">[Placeholder Email]</span></p>
+            </div>
+
+            <section class="profile-actions">
+                <h3>账户操作</h3>
+                <div class="change-password-section">
+                    <h4>修改密码</h4>
+                    <form id="changePasswordForm">
+                        <div class="form-group">
+                            <label for="current_password">Current Password:</label>
+                            <input type="password" id="current_password" name="current_password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new_password">New Password:</label>
+                            <input type="password" id="new_password" name="new_password" required minlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_new_password">Confirm New Password:</label>
+                            <input type="password" id="confirm_new_password" name="confirm_new_password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Change Password</button>
+                        </div>
+                    </form>
+                </div>
+                <button id="logoutButton" class="logout-button">Logout</button>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NewsWebsite. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Placeholder for logout functionality
+        const logoutButton = document.getElementById('logoutButton');
+        if (logoutButton) {
+            logoutButton.addEventListener('click', function() {
+                alert('Logout button clicked (functionality not implemented).');
+                // In a real application, this would handle session termination and redirect.
+                // window.location.href = '../index.html';
+            });
+        }
+
+        // Basic form validation for new password match
+        const changePasswordForm = document.getElementById('changePasswordForm');
+        if (changePasswordForm) {
+            changePasswordForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent actual submission for now
+                const newPassword = document.getElementById('new_password').value;
+                const confirmNewPassword = document.getElementById('confirm_new_password').value;
+                if (newPassword !== confirmNewPassword) {
+                    alert('New passwords do not match!');
+                } else if (newPassword.length < 8) {
+                    alert('New password must be at least 8 characters long.');
+                } else {
+                    alert('Change password form submitted (functionality not implemented).');
+                    // Here you would typically send data to a server
+                    changePasswordForm.reset();
+                }
+            });
+        }
+    </script>
+</body>
+</html>

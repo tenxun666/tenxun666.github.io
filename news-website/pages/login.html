@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login - My News Website</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="../index.html">NewsWebsite</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-content">
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="world.html">World</a></li>
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-form-container">
+            <h2>用户登录</h2>
+            <form id="loginForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="username_email">Username or Email:</label>
+                    <input type="text" id="username_email" name="username_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">登录</button>
+                </div>
+            </form>
+            <p class="switch-auth-link">
+                Don't have an account? <a href="register.html">Register here</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 NewsWebsite. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
